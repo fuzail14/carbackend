@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\GetAQuoteController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,8 @@ Route::get('viewcars', [CarController::class, 'viewCars']);
 Route::get('getCars/{userId}', [CarController::class, 'getCars']);
 
 
+Route::post('quote', [GetAQuoteController::class, 'store']);
+Route::get('quotes/{userId}', [GetAQuoteController::class, 'show']);
 
 
 
