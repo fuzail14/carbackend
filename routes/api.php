@@ -26,7 +26,7 @@ Route::get('getCars/{userId}', [CarController::class, 'getCars']);
 
 
 Route::post('quote', [GetAQuoteController::class, 'store']);
-Route::get('quotes/{userId}', [GetAQuoteController::class, 'show']);
+Route::get('getQuotes/{userId}', [GetAQuoteController::class, 'getQuotes']);
 
 
 

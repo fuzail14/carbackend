@@ -28,14 +28,7 @@ class CarController extends Controller
         return response()->json($car, 200);
     }
 
-    public function viewCars($userId)
-    {
-        
-        
-        $cars = Car::where('user_id', $userId)->get();
-
-        return response()->json(["data" => $cars]);
-    }
+ 
 
 
 

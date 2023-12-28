@@ -33,9 +33,16 @@ class GetAQuoteController extends Controller
         return response()->json(['message' => 'Quote saved successfully!'], 200);
     }
 
-    public function show($userId)
+   
+
+    public function getQuotes($userid)
+
     {
-        $quotes = Quote::where('user_id', $userId)->get();
-        return view('quotes', compact('quotes'));
+
+
+        $quotes = Quote::where('user_id', $userid)->get();
+
+
+        return response()->json(["quotes" => $quotes]);
     }
 }
