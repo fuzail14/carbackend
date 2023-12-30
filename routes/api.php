@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\claimController;
 use App\Http\Controllers\GetAQuoteController;
 
 
@@ -27,6 +28,9 @@ Route::get('getCars/{userId}', [CarController::class, 'getCars']);
 
 Route::post('quote', [GetAQuoteController::class, 'store']);
 Route::get('getQuotes/{userId}', [GetAQuoteController::class, 'getQuotes']);
+
+Route::post('storeClaims', [claimController::class, 'storeClaims']);
+Route::get('getClaims/{userId}', [claimController::class, 'getClaims']);
 
 
 
